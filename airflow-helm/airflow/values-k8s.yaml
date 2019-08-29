@@ -1,0 +1,28 @@
+airflow:
+  image:
+    repository: dnguyenvaluemotive/airflow-k8s # aws-ecr: 806232589401.dkr.ecr.eu-west-1.amazonaws.com/airflow-k8s
+    tag: latest-fixed
+    pull_policy: IfNotPresent
+  dags:
+    git:
+      url: https://github.com/duy0611/airflow-eks-helm-demo
+      branch: master
+      subpath: example-dags
+      wait: 30
+
+ingress:
+  enabled: true
+  web:
+    path: "/"
+    host: "airflow-k8s.valuemotive.com"
+    tls:
+      enabled: true
+    annotations:
+      kubernetes.io/ingress.class: "nginx"
+
+postgresql:
+  enabled: false
+  postgresHost: airflow-postgresql
+  postgresUser: postgres
+  postgresPassword: airflow
+  postgresDatabase: airflow
