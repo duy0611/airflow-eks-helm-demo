@@ -64,3 +64,8 @@ To install airflow chart:
 cd airflow-helm/airflow
 helm upgrade --install airflow ./ -f values.yaml -f values-k8s.yaml
 ```
+
+To access airflow-web UI:
+```
+kubectl port-forward $(kubectl get pod --selector="app=airflow-web,release=airflow" --output jsonpath='{.items[0].metadata.name}') 8080:8080
+```
