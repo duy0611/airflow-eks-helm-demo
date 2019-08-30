@@ -69,3 +69,10 @@ To access airflow-web UI:
 ```
 kubectl port-forward $(kubectl get pod --selector="app=airflow-web,release=airflow" --output jsonpath='{.items[0].metadata.name}') 8080:8080
 ```
+
+## Cleaning up
+
+helm del --purge airflow
+terraform destroy
+
+Note: remember to take down Database resource also if that is set up on cloud
