@@ -1,4 +1,17 @@
-# airflow-eks-helm-demo
+# Friday Hacks:  Apache Airflow x Kubernetes
+
+## About Friday Hacks
+
+Friday Hacks is an informal event that takes place on most Fridays at 1pm, at the Valuemotive office.
+
+Valuemotive has a culture of sharing interesting ideas. Our employees are curious, which leads to ad hoc exchanges. Folks will test the validity of their ideas, ask for feedback on complicated things and discuss their work with others.
+
+We play with an interesting piece of tech and have a discussion about it with an expert present. We often weight on pros and cons of using the tech at work. We always learn something new! You are looking at a demo/boilerplate/guide that was prepared in advance to support the ’Hack.
+
+Examples of previous Friday Hacks: AWS Lambda + Serverless framework, Apache Airflow, Rust, Elm.
+
+## About this 'Hack
+
 Demo of Airflow (running in Kubernetes cluster with Kubernetes Executor and Kubernetes Operator) with AWS EKS and Helm
 
 # Usage
